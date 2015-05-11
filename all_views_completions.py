@@ -21,7 +21,7 @@ class AllAutocomplete(sublime_plugin.EventListener):
 
         # Limit number of views but always include the active view. This
         # view goes first to prioritize matches close to cursor position.
-        other_views = [v for v in sublime.active_window().views() if v.id != view.id]
+        other_views = [v for w in sublime.windows() for v in w.views() if v.id != view.id]
         views = [view] + other_views
         views = views[0:MAX_VIEWS]
 
