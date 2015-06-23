@@ -17,6 +17,8 @@ MAX_FIX_TIME_SECS_PER_VIEW = 0.01
 class AllAutocomplete(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
+
+        print('AllAutocomplete call on_query_completions')
         words = []
 
         # Limit number of views but always include the active view. This
