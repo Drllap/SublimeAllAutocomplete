@@ -18,7 +18,7 @@ class AllAutocomplete(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
 
-        print('AllAutocomplete call on_query_completions')
+        # print('AllAutocomplete call on_query_completions')
         words = []
 
         # Limit number of views but always include the active view. This
